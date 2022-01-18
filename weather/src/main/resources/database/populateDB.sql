@@ -1,0 +1,1 @@
+--INSERT INTO weather_history VALUES (2022-01-14, "1");
