@@ -33,7 +33,10 @@ public class WeatherControllerRest {
         } else {
             Weather weather1 = client.readWeatherInfo();
             service.save(weather1);
-            return new ResponseEntity<>(weather1, HttpStatus.ACCEPTED);
+//            return new ResponseEntity<>(weather1, HttpStatus.ACCEPTED);
+            return weather1 != null
+                    ? new ResponseEntity<>(weather1, HttpStatus.OK)
+                    : new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 }

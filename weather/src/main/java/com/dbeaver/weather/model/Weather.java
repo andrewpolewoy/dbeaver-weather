@@ -17,9 +17,8 @@ import java.time.LocalDate;
 @ToString
 @JsonIgnoreProperties(value = { "id","date" })
 @Table(name = "weather_history", schema = "weather")
-public class Weather
+public class Weather {
 
-{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

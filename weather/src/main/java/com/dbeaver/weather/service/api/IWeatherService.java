@@ -6,6 +6,5 @@ import java.time.LocalDate;
 
 public interface IWeatherService {
     Weather getWeatherByDate(LocalDate aLong);
-//    Weather readWeatherInfo();
     void save(Weather weather);
 }

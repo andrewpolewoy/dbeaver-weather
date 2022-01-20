@@ -45,7 +45,6 @@ public class HttpClient {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(response);
 
-
             for (Iterator iterator = jsonObject.keySet().iterator(); iterator.hasNext(); ) {
                 String key = (String) iterator.next();
                 if (key.equals("fact")) {
@@ -60,6 +59,8 @@ public class HttpClient {
                 }
             }
         } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("");
             return null;
         }
         return null;
